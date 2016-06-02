@@ -299,3 +299,17 @@ $
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
+Let's pretend some time has passed. We've invited other people to our GitHub project who have pulled your changes, made their own commits, and pushed them.
+
+We can check for changes on our GitHub repository and pull down any new changes by running:
+git pull origin master
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+$ git pull origin master
+From https://github.com/puneet-kr-sh/GitBash_MINGW64_TestProject
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+-------------------------------------------------------------------------------------------------------------------------------------------
