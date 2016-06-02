@@ -234,3 +234,68 @@ Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
 $
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
+Great job! We've gone ahead and created a new empty GitHub repository for you to use with Try Git at 
+https://github.com/try-git/try_git.git. 
+
+To push our local repo to the GitHub server we'll need to add a remote repository.
+This command takes a remote name and a repository URL, which in your case is https://github.com/try-git/try_git.git.
+
+Go ahead and run git remote add with the options below:
+
+git remote add origin https://github.com/try-git/try_git.git
+
+
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git remote add origin https://github.com/puneet-kr-sh/GitCMD_TestProject.git
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+---------------------------------------------------------------------------------------------------
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git remote add origin https://github.com/puneet-kr-sh/GitBash_MINGW64_TestProject.git
+fatal: remote origin already exists.
+
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git remote -v
+origin  https://github.com/puneet-kr-sh/GitCMD_TestProject.git (fetch)
+origin  https://github.com/puneet-kr-sh/GitCMD_TestProject.git (push)
+
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git remote rm origin
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git remote -v
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git remote add origin https://github.com/puneet-kr-sh/GitBash_MINGW64_TestProject.git
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+------------------------------------------------------------------------------------------------------------
+$ git push -u origin master
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git push -u origin master
+Username for 'https://github.com': puneet-kr-sh
+Password for 'https://puneet-kr-sh@github.com':
+Counting objects: 18, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (18/18), 3.35 KiB | 0 bytes/s, done.
+Total 18 (delta 8), reused 0 (delta 0)
+To https://github.com/puneet-kr-sh/GitBash_MINGW64_TestProject.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
