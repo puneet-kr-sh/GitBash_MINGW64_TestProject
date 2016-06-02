@@ -1,0 +1,13 @@
+This file was created by Puneet Kr. Sharma on 2 June 2016 at 5:08 PM
+to test code from Git Bash
+
+code copied from-: https://try.github.io/levels/1/challenges/1 -....
+
+in GitBash_MINGW64_TestProject Repository
+
+git init
+git status
+
+git ...
+
+git add GitBash_MINGW64_TestProject.txt
