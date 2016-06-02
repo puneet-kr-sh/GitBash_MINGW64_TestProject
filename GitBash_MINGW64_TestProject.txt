@@ -203,4 +203,34 @@ nothing to commit, working directory clean
 
 Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
 $
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+$ git log
+commit af105943c2843b846d80439a22282c0272ff9874
+Author: PUNEET KUMAR SHARMA <puneet.trancis@gmail.com>
+Date:   Thu Jun 2 18:49:00 2016 +0530
+
+    Git Bash Commit at 6:48 PM
+
+commit f4d99aaa6227d81a07252f7c1134dd761f5bd754
+Author: PUNEET KUMAR SHARMA <puneet.trancis@gmail.com>
+Date:   Thu Jun 2 18:42:42 2016 +0530
+
+    COMMIT at 6:42 PM by Puneet on 2nd June 2016
+
+commit c2a17aab560949ce2905a7339a0d7898fb8cf1d8
+Author: PUNEET KUMAR SHARMA <puneet.trancis@gmail.com>
+Date:   Thu Jun 2 18:34:00 2016 +0530
+
+    COMMIT COMMAND after adding all '.txt' files
+
+commit 552019a94bed7197296be0c4459346acf0762a83
+Author: PUNEET KUMAR SHARMA <puneet.trancis@gmail.com>
+Date:   Thu Jun 2 18:04:10 2016 +0530
+
+    commiting after running [git add GitBash_MINGW64_TestProject.txt] command LEARING GIT COMMANDS
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
