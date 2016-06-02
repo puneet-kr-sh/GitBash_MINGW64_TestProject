@@ -1,3 +1,5 @@
+=========================================================================================================================================================
+
 This file was created by Puneet Kr. Sharma on 2 June 2016 at 5:08 PM
 to test code from Git Bash
 
@@ -5,9 +7,144 @@ code copied from-: https://try.github.io/levels/1/challenges/1 -....
 
 in GitBash_MINGW64_TestProject Repository
 
-git init
-git status
+=========================================================================================================================================================
 
-git ...
+Android@Android-PC MINGW64 ~
+$ cd GitBash_MINGW64_TestProject
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject
+$
+------------------------------------------------------------------------------------------------------------------------------
+To initialize a Git repository here, type the following command:
+
+git init
+$ git init
+Initialized empty Git repository in C:/Users/Android/GitBash_MINGW64_TestProject/.git/
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+------------------------------------------------------------------------------------------------------------------------------
+To see what the current state of our project is, type the following command:
+
+git status
+$ git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+------------------------------------------------------------------------------------------------------------------------------
+I created a file called GitBash_MINGW64_TestProject.txt in the GitBash_MINGW64_TestProject repository
+To see how the repository status has changed: run the git status command again 
+
+git status
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        GitBash_MINGW64_TestProject.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ 
+--------------------------------------------------------------------------------------------------------------------------------
+Notice how Git says GitBash_MINGW64_TestProject.txt is "untracked"? 
+That means Git sees that GitBash_MINGW64_TestProject.txt is a new file.
+
+To tell Git to start tracking changes made to octocat.txt, 
+we first need to add it to the staging area, type the following command:
+
+git add file_name.file_extention
 
 git add GitBash_MINGW64_TestProject.txt
+$ git add GitBash_MINGW64_TestProject.txt
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+---------------------------------------------------------------------------------------------------------------------------------
+Git is now tracking our octocat.txt file. Let's run git status again to see where we stand:
+
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   GitBash_MINGW64_TestProject.txt
+
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+---------------------------------------------------------------------------------------------------------------------------------
+Notice how Git says changes to be committed? The files listed here are in the Staging Area, 
+and they are not in our repository yet. We could add or remove files from the stage before we store them in the repository.
+
+To store our staged changes we run the commit command with a message describing what we've changed. 
+Let's do that now by typing:
+
+git commit -m "commiting after running [git add GitBash_MINGW64_TestProject.txt] command LEARING GIT COMMANDS"
+	before above command I made some changes and run command
+		git status
+		$ git status
+		On branch master
+
+		Initial commit
+
+		Changes to be committed:
+  			(use "git rm --cached <file>..." to unstage)
+
+        			new file:   GitBash_MINGW64_TestProject.txt
+
+		Changes not staged for commit:
+		  (use "git add <file>..." to update what will be committed)
+		  (use "git checkout -- <file>..." to discard changes in working directory)
+
+		        modified:   GitBash_MINGW64_TestProject.txt
+
+
+		Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+		$
+-----------------------------------------------------------------------------------------------------------------------------------------
+$ git commit -m "commiting after running [git add GitBash_MINGW64_TestProject.txt] command LEARING GIT COMMANDS"
+[master (root-commit) 552019a] commiting after running [git add GitBash_MINGW64_TestProject.txt] command LEARING GIT COMMANDS
+ 1 file changed, 13 insertions(+)
+ create mode 100644 GitBash_MINGW64_TestProject.txt
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Great! You also can use wildcards if you want to add many files of the same type. 
+Notice that I've added a bunch of .txt files into your directory below.
+
+I put some in a directory named "octofamily" and some others ended up in the root of our "octobox" directory. Luckily, 
+we can add all the new files using a wildcard with git add. Don't forget the quotes!
+------------------------------------------------------------------------------------------------------------------------------------------
+
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   GitBash_MINGW64_TestProject.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
