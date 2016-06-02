@@ -197,4 +197,10 @@ Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
 $
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
 
