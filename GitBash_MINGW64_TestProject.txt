@@ -1,0 +1,723 @@
+=========================================================================================================================================================
+
+This file was created by Puneet Kr. Sharma on 2 June 2016 at 5:08 PM
+to test code from Git Bash
+
+code copied from-: https://try.github.io/levels/1/challenges/1 -....
+
+in GitBash_MINGW64_TestProject Repository
+
+=========================================================================================================================================================
+
+Android@Android-PC MINGW64 ~
+$ cd GitBash_MINGW64_TestProject
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject
+$
+------------------------------------------------------------------------------------------------------------------------------
+To initialize a Git repository here, type the following command:
+
+git init
+$ git init
+Initialized empty Git repository in C:/Users/Android/GitBash_MINGW64_TestProject/.git/
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+------------------------------------------------------------------------------------------------------------------------------
+To see what the current state of our project is, type the following command:
+
+git status
+$ git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+------------------------------------------------------------------------------------------------------------------------------
+I created a file called GitBash_MINGW64_TestProject.txt in the GitBash_MINGW64_TestProject repository
+To see how the repository status has changed: run the git status command again 
+
+git status
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        GitBash_MINGW64_TestProject.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ 
+--------------------------------------------------------------------------------------------------------------------------------
+Notice how Git says GitBash_MINGW64_TestProject.txt is "untracked"? 
+That means Git sees that GitBash_MINGW64_TestProject.txt is a new file.
+
+To tell Git to start tracking changes made to octocat.txt, 
+we first need to add it to the staging area, type the following command:
+
+git add file_name.file_extention
+
+git add GitBash_MINGW64_TestProject.txt
+$ git add GitBash_MINGW64_TestProject.txt
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+---------------------------------------------------------------------------------------------------------------------------------
+Git is now tracking our octocat.txt file. Let's run git status again to see where we stand:
+
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   GitBash_MINGW64_TestProject.txt
+
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+---------------------------------------------------------------------------------------------------------------------------------
+Notice how Git says changes to be committed? The files listed here are in the Staging Area, 
+and they are not in our repository yet. We could add or remove files from the stage before we store them in the repository.
+
+To store our staged changes we run the commit command with a message describing what we've changed. 
+Let's do that now by typing:
+
+git commit -m "commiting after running [git add GitBash_MINGW64_TestProject.txt] command LEARING GIT COMMANDS"
+	before above command I made some changes and run command
+		git status
+		$ git status
+		On branch master
+
+		Initial commit
+
+		Changes to be committed:
+  			(use "git rm --cached <file>..." to unstage)
+
+        			new file:   GitBash_MINGW64_TestProject.txt
+
+		Changes not staged for commit:
+		  (use "git add <file>..." to update what will be committed)
+		  (use "git checkout -- <file>..." to discard changes in working directory)
+
+		        modified:   GitBash_MINGW64_TestProject.txt
+
+
+		Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+		$
+-----------------------------------------------------------------------------------------------------------------------------------------
+$ git commit -m "commiting after running [git add GitBash_MINGW64_TestProject.txt] command LEARING GIT COMMANDS"
+[master (root-commit) 552019a] commiting after running [git add GitBash_MINGW64_TestProject.txt] command LEARING GIT COMMANDS
+ 1 file changed, 13 insertions(+)
+ create mode 100644 GitBash_MINGW64_TestProject.txt
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Great! You also can use wildcards if you want to add many files of the same type. 
+Notice that I've added a bunch of .txt files into your directory below.
+
+I put some in a directory named "octofamily" and some others ended up in the root of our "octobox" directory. Luckily, 
+we can add all the new files using a wildcard with git add. Don't forget the quotes!
+------------------------------------------------------------------------------------------------------------------------------------------
+
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   GitBash_MINGW64_TestProject.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+
+------------------------------------------------------------------------------------------------------------------------------------------
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   GitBash_MINGW64_TestProject.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        New Text Document (2).txt
+        New Text Document (3).txt
+        New Text Document.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ 
+git add *.txt
+----------------------------------------------------------------------------------------------------------------------------------------------
+$ git add *.txt
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ 
+----------------------------------------------------------------------------------------------------------------------------------------------
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   GitBash_MINGW64_TestProject.txt
+        new file:   New Text Document (2).txt
+        new file:   New Text Document (3).txt
+        new file:   New Text Document.txt
+
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+----------------------------------------------------------------------------------------------------------------------------------------------
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git commit -m "COMMIT COMMAND after adding all '.txt' files"
+[master c2a17aa] COMMIT COMMAND after adding all '.txt' files
+ 4 files changed, 153 insertions(+), 2 deletions(-)
+ create mode 100644 New Text Document (2).txt
+ create mode 100644 New Text Document (3).txt
+ create mode 100644 New Text Document.txt
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+$ git log
+commit af105943c2843b846d80439a22282c0272ff9874
+Author: PUNEET KUMAR SHARMA <puneet.trancis@gmail.com>
+Date:   Thu Jun 2 18:49:00 2016 +0530
+
+    Git Bash Commit at 6:48 PM
+
+commit f4d99aaa6227d81a07252f7c1134dd761f5bd754
+Author: PUNEET KUMAR SHARMA <puneet.trancis@gmail.com>
+Date:   Thu Jun 2 18:42:42 2016 +0530
+
+    COMMIT at 6:42 PM by Puneet on 2nd June 2016
+
+commit c2a17aab560949ce2905a7339a0d7898fb8cf1d8
+Author: PUNEET KUMAR SHARMA <puneet.trancis@gmail.com>
+Date:   Thu Jun 2 18:34:00 2016 +0530
+
+    COMMIT COMMAND after adding all '.txt' files
+
+commit 552019a94bed7197296be0c4459346acf0762a83
+Author: PUNEET KUMAR SHARMA <puneet.trancis@gmail.com>
+Date:   Thu Jun 2 18:04:10 2016 +0530
+
+    commiting after running [git add GitBash_MINGW64_TestProject.txt] command LEARING GIT COMMANDS
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Great job! We've gone ahead and created a new empty GitHub repository for you to use with Try Git at 
+https://github.com/try-git/try_git.git. 
+
+To push our local repo to the GitHub server we'll need to add a remote repository.
+This command takes a remote name and a repository URL, which in your case is https://github.com/try-git/try_git.git.
+
+Go ahead and run git remote add with the options below:
+
+git remote add origin https://github.com/try-git/try_git.git
+
+
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git remote add origin https://github.com/puneet-kr-sh/GitCMD_TestProject.git
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+---------------------------------------------------------------------------------------------------
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git remote add origin https://github.com/puneet-kr-sh/GitBash_MINGW64_TestProject.git
+fatal: remote origin already exists.
+
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git remote -v
+origin  https://github.com/puneet-kr-sh/GitCMD_TestProject.git (fetch)
+origin  https://github.com/puneet-kr-sh/GitCMD_TestProject.git (push)
+
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git remote rm origin
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git remote -v
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git remote add origin https://github.com/puneet-kr-sh/GitBash_MINGW64_TestProject.git
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+------------------------------------------------------------------------------------------------------------
+$ git push -u origin master
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git push -u origin master
+Username for 'https://github.com': puneet-kr-sh
+Password for 'https://puneet-kr-sh@github.com':
+Counting objects: 18, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (18/18), 3.35 KiB | 0 bytes/s, done.
+Total 18 (delta 8), reused 0 (delta 0)
+To https://github.com/puneet-kr-sh/GitBash_MINGW64_TestProject.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Let's pretend some time has passed. We've invited other people to our GitHub project who have pulled your changes, made their own commits, and pushed them.
+
+We can check for changes on our GitHub repository and pull down any new changes by running:
+git pull origin master
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+$ git pull origin master
+From https://github.com/puneet-kr-sh/GitBash_MINGW64_TestProject
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+-------------------------------------------------------------------------------------------------------------------------------------------
+AFTER CHANGING THE A FILE 
+---------------------------
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git pull origin master
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/puneet-kr-sh/GitBash_MINGW64_TestProject
+ * branch            master     -> FETCH_HEAD
+   9997e0b..7f9b255  master     -> origin/master
+Updating 9997e0b..7f9b255
+Fast-forward
+ New Text Document.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Uh oh, looks like there have been some additions and changes to the octocat family. 
+Let's take a look at what is different from our last commit by using the git diff command.
+
+In this case we want the diff of our most recent commit, which we can refer to using the HEAD pointer.
+______________________________________________
+
+but this command didn't work for me, OUTPUT :
+______________________________________________
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git pull origin master
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/puneet-kr-sh/GitBash_MINGW64_TestProject
+ * branch            master     -> FETCH_HEAD
+   9997e0b..7f9b255  master     -> origin/master
+Updating 9997e0b..7f9b255
+Fast-forward
+ New Text Document.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git diff head
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=========================================================================================================================================================
+----------------
+0n 6 June 2016
+----------------
+
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git pull orogin master
+fatal: 'orogin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ clear
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git pull origin master
+From https://github.com/puneet-kr-sh/GitBash_MINGW64_TestProject
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git diff HEAD
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AFTER_PUSH/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git diff HEAD
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git diff --staged
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git add AFTER_PUSH
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   AFTER_PUSH/afterPush.txt
+
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git diff HEAD
+diff --git a/AFTER_PUSH/afterPush.txt b/AFTER_PUSH/afterPush.txt
+new file mode 100644
+index 0000000..a765a43
+--- /dev/null
++++ b/AFTER_PUSH/afterPush.txt
+@@ -0,0 +1 @@
++This file has been inserted after push command & git diff HEAD command
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git diff --staged
+diff --git a/AFTER_PUSH/afterPush.txt b/AFTER_PUSH/afterPush.txt
+new file mode 100644
+index 0000000..a765a43
+--- /dev/null
++++ b/AFTER_PUSH/afterPush.txt
+@@ -0,0 +1 @@
++This file has been inserted after push command & git diff HEAD command
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+
+
+=========================================================================================================================================================
+You can unstage files by using the git reset command. 
+-----------------------------------------------------
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git reset AFTER_PUSH/afterPush.txt
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AFTER_PUSH/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git diff --staged
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git diff HEAD
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+
+
+=========================================================================================================================================================
+
+git reset did a great job of unstaging octodog.txt, but you'll notice that it's still there. it's just not staged anymore.
+ It would be great if we could go back to how things were before octodog came around and ruined the party.
+
+Files can be changed back to how they were at the last commit by using the command: 
+git checkout -- <target>. 
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git checkout -- AFTER_PUSH
+error: pathspec 'AFTER_PUSH' did not match any file(s) known to git.
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git checkout -- AFTER_PUSH/
+error: pathspec 'AFTER_PUSH/' did not match any file(s) known to git.
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+
+=========================================================================================================================================================
+TO CREATE A BRANCH :
+------------------------
+When developers are working on a feature or bug they'll often create a copy (aka. branch) of their code they can make separate commits to. 
+Then when they're done they can merge this branch back into their main master branch.
+
+We want to remove all these pesky octocats, so let's create a branch called clean_up, where we'll do all the work:
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git branch clean_up
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git branch
+  clean_up
+* master
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git checkout clean_up
+Switched to branch 'clean_up'
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (clean_up)
+$ git branch
+* clean_up
+  master
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (clean_up)
+$
+
+
+=========================================================================================================================================================
+
+Ok, so you're in the clean_up branch. 
+You can finally remove all those pesky octocats by using the git rm command which will not only remove the actual files from disk, 
+but will also stage the removal of the files for us.
+
+You're going to want to use a wildcard again to get all the octocats in one sweep, go ahead and run:
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (clean_up)
+$ git status
+On branch clean_up
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AFTER_PUSH/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (clean_up)
+$ git rm *.txt
+rm 'GitBash_MINGW64_TestProject.txt'
+rm 'New Text Document (2).txt'
+rm 'New Text Document (3).txt'
+rm 'New Text Document.txt'
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (clean_up)
+$ git status
+On branch clean_up
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    GitBash_MINGW64_TestProject.txt
+        deleted:    New Text Document (2).txt
+        deleted:    New Text Document (3).txt
+        deleted:    New Text Document.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AFTER_PUSH/
+
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (clean_up)
+$
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+NOW COMMIT 
+--------------
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (clean_up)
+$ git commit -m "commit after Remove all the text files (git rm *.txt) on clean_up branch"
+[clean_up 79e3999] commit after Remove all the text files (git rm *.txt) on clean_up branch
+ 4 files changed, 381 deletions(-)
+ delete mode 100644 GitBash_MINGW64_TestProject.txt
+ delete mode 100644 New Text Document (2).txt
+ delete mode 100644 New Text Document (3).txt
+ delete mode 100644 New Text Document.txt
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (clean_up)
+$ 
+=========================================================================================================================================================
+
+
+Great, you're almost finished with the cat... er the bug fix, 
+you just need to switch back to the master branch so you can copy (or merge) your changes from the clean_up branch back into the master branch.
+
+Go ahead and checkout the master branch:
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (clean_up)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Alrighty, the moment has come when you have to merge your changes from the clean_up branch into the master branch. 
+Take a deep breath, it's not that scary.
+
+We're already on the master branch, so we just need to tell Git to merge the clean_up branch into it:
+
+git merge clean_up
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git merge clean_up
+Updating 0c534ee..79e3999
+Fast-forward
+ GitBash_MINGW64_TestProject.txt | 364 ----------------------------------------
+ New Text Document (2).txt       |   4 -
+ New Text Document (3).txt       |   9 -
+ New Text Document.txt           |   4 -
+ 4 files changed, 381 deletions(-)
+ delete mode 100644 GitBash_MINGW64_TestProject.txt
+ delete mode 100644 New Text Document (2).txt
+ delete mode 100644 New Text Document (3).txt
+ delete mode 100644 New Text Document.txt
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+
+=========================================================================================================================================================
+
+Congratulations! You just accomplished your first successful bugfix and merge. All that's left to do is clean up after yourself. 
+Since you're done with the clean_up branch you don't need it anymore.
+
+You can use git branch -d <branch name> to delete a branch. Go ahead and delete the clean_up branch now:
+
+git branch -d clean_up
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git branch
+  clean_up
+* master
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git branch -d clean_up
+Deleted branch clean_up (was 79e3999).
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git branch
+* master
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+
+=========================================================================================================================================================
+
+Here we are, at the last step. I'm proud that you've made it this far, and it's been great learning Git with you.
+All that's left for you to do now is to push everything you've been working on to your remote repository, and you're done!
+
+git push
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$ git push
+Username for 'https://github.com': puneet-kr-sh
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (1/1), done.
+Writing objects: 100% (2/2), 278 bytes | 0 bytes/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/puneet-kr-sh/GitBash_MINGW64_TestProject.git
+   0c534ee..79e3999  master -> master
+
+Android@Android-PC MINGW64 ~/GitBash_MINGW64_TestProject (master)
+$
+
+=========================================================================================================================================================
+
+
+
+
+
+=========================================================================================================================================================
+
+								THE END
+
+=========================================================================================================================================================
+
